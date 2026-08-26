@@ -47,3 +47,6 @@ public/pagefind/*
 AGENTS.md
 TODO.md
 skills-lock.json
+
+# Misc
+.astro.README.md

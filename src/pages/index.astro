@@ -11,6 +11,8 @@ import Footer from '@/components/Footer.astro';
 
 const allPosts = await getAllPosts();
 const structuredData = generateWebsiteSchema();
+const featuredPost = allPosts[0] ?? null;
+const recentPosts = allPosts.slice(1, siteConfig.recentPosts);
 ---
 <BaseLayout schema={structuredData}>
 	<SEO slot="seo" title="Home" description={siteConfig.description} ogImage="/og/default.png" />
@@ -18,8 +20,8 @@ const structuredData = generateWebsiteSchema();
 	
 	<HomeHero />
 	<!-- <MastHead /> -->
-	<FeaturedPost post={allPosts[0]} />
-	<RecentPosts posts={allPosts.slice(1, siteConfig.recentPosts)} sectionTitle="Recent" />
+	{featuredPost ? <FeaturedPost post={featuredPost} /> : null}
+	<RecentPosts posts={recentPosts} sectionTitle="Recent" />
 	<Fragment slot="footer">
     <Footer
 			meta='Built for readers, writers, and unfinished drafts.'

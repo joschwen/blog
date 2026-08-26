@@ -38,7 +38,7 @@ const breadcrumbs = segments.map(
       class="text-muted-foreground flex flex-wrap items-center gap-2 text-xs font-ui my-8"
     >
       <a
-        href="/"
+        href={Astro.site ? new URL("", Astro.site).toString() : "/"}
         class="flex gap-1 items-center hover:text-foreground transition-colors"
       >
         <HomeIcon class="text-muted-forground size-4"/>

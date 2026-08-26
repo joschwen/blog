@@ -36,7 +36,7 @@ const {
     ))}
   </div>
 
-  <a href="/archive" class="group inline-cta text-muted-foreground hover:text-foreground">
+  <a href={Astro.site ? new URL("archive", Astro.site).toString() : "/archive"} class="group inline-cta text-muted-foreground hover:text-foreground">
     <span class="inline-cta-line group-hover:w-16"></span>
     Browse archive
   </a>

@@ -20,8 +20,8 @@ const { lang = "en", schema } = Astro.props;
   <meta name="theme-color" content="" />
 
   <link rel="icon" href={getAssetPath("/favicon.svg")} type="image/svg+xml" />
-  <link rel="sitemap" href="/sitemap-index.xml" />
-  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml" />
+  <link rel="sitemap" href={getAssetPath("/sitemap-index.xml")} />
+  <link rel="alternate" type="application/rss+xml" title="RSS Feed" href={getAssetPath("/rss.xml")} />
 
 	  <!-- SEO injected per layout -->
   <slot name="seo" />
@@ -62,13 +62,13 @@ const { lang = "en", schema } = Astro.props;
   </script>
   
   <link
-    href="/pagefind/pagefind-component-ui.css"
+    href={getAssetPath("/pagefind/pagefind-component-ui.css")}
     rel="stylesheet"
   />
   <link rel="stylesheet" href="/src/styles/pagefind.css" />
   
   <script
-    src="/pagefind/pagefind-component-ui.js"
+    src={getAssetPath("/pagefind/pagefind-component-ui.js")}
     type="module"
   ></script>
 

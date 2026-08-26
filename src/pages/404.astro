@@ -17,14 +17,14 @@ import PageLayout from "@/layouts/PageLayout.astro";
       class="flex flex-wrap gap-x-5 gap-y-2 font-ui text-sm"
     >
       <a
-        href="/"
+        href={Astro.site ? new URL("", Astro.site).toString() : "/"}
         class="nav-link"
       >
         Home
       </a>
 
       <a
-        href="/archive"
+        href={Astro.site ? new URL("archive", Astro.site).toString() : "/archive"}
         class="nav-link"
       >
         Archive

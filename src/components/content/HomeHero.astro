@@ -4,7 +4,7 @@ import siteConfig from "@/site.config";
 
 const variant = siteConfig.heroVariant;
 
-const homeEntry = await getEntry("pages", "home-intro");
+const homeEntry = await getEntry("pages", "home-intro").catch(() => null);
 const Content = homeEntry ? (await render(homeEntry)).Content : null;
 ---
 <section class="home-hero flex flex-col pt-8 sm:pt-12" data-pagefind-ignore>
