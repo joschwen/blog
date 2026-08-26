@@ -18,6 +18,7 @@ import { remarkObsidian } from './src/plugins/remark-obsidian.ts';
 // https://astro.build/config
 export default defineConfig({
   site: siteConfig.url,
+  base: '/blog',
 
   image: {
     responsiveStyles: true,
@@ -35,9 +36,9 @@ export default defineConfig({
   security: {
     contentSecurityPolicy: {
       directives: {
-        "script-src": ["'self'", "https://static.cloudflareinsights.com"],
+        "script-src": ["'self'", "https://static.cloudflareinsights.com", "https://cloud.umami.is"],
         "style-src":  ["'self'", "'unsafe-inline'"],
-        "connect-src":["'self'", "https://cloudflareinsights.com"],
+        "connect-src":["'self'", "https://cloudflareinsights.com", "https://cloud.umami.is"],
         "worker-src": ["'self'", "blob:"],
       },
     },

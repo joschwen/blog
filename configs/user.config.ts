@@ -1,12 +1,12 @@
 import type { UserConfig } from "../src/site.config";
 
 const userConfig: UserConfig = {
-  title: "Lipi",
+  title: "joschwen - blog",
   description:
-    "A minimal editorial theme for Astro built for blogs, journals, travel writing, and long-form publishing.",
+    "Brainthinkings and stuff",
 
-  url: "https://astro-lipi.pages.dev",
-  author: "John Doe",
+  url: "https://joschwen.github.io",
+  // author: "Jonas Schwenke",
 
   logo: "/logo.svg",
   avatar: "/avatar.png",
@@ -20,27 +20,27 @@ const userConfig: UserConfig = {
   footerLinks: [
     { title: "RSS", url: "/rss.xml" },
     { title: "Archive", url: "/archive" },
-    { title: "Source", url: "https://github.com/thelocalhoststudio/lipi" },
+    { title: "Source", url: "https://github.com/joschwen/blog" },
     
   ],
 
   social: [
     {
       title: "GitHub",
-      url: "https://github.com/thelocalhoststudio/lipi",
+      url: "https://github.com/joschwen/blog",
       icon: "github",
     },
-    {
-      title: "X",
-      url: "https://x.com/",
-      icon: "x",
-    },
-    {
-      title: "LinkedIn",
-      url: "https://linkedin.com/",
-      icon: "linkedin",
-    },
-    
+    // {
+    //   title: "X",
+    //   url: "https://x.com/",
+    //   icon: "x",
+    // },
+    // {
+    //   title: "LinkedIn",
+    //   url: "https://linkedin.com/",
+    //   icon: "linkedin",
+    // },
+     
   ],
 
   footerCredits: "Designed for reading. Built with Astro & Lipi",
@@ -50,11 +50,12 @@ const userConfig: UserConfig = {
   relatedPosts: 4,
 
   showThemeToggle: true,
+  showFooter: false,
   showReadingTime: true,
 
   heroVariant: "studio",
 
-  annotation: "Writing between filter coffees and terminal windows.",
+  // annotation: "Writing between filter coffees and terminal windows.",
 };
 
 export default userConfig;

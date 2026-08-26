@@ -2,6 +2,7 @@
 import { Font } from 'astro:assets';
 import { ClientRouter } from "astro:transitions";
 import "@/styles/global.css";
+import { getAssetPath } from "@/utils/url";
 
 interface Props {
   lang?: string;
@@ -18,7 +19,7 @@ const { lang = "en", schema } = Astro.props;
   <!-- Filled at runtime by theme.ts to match the current background colour -->
   <meta name="theme-color" content="" />
 
-  <link rel="icon" href="/favicon.ico" type="image/svg+xml" />
+  <link rel="icon" href={getAssetPath("/favicon.svg")} type="image/svg+xml" />
   <link rel="sitemap" href="/sitemap-index.xml" />
   <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml" />
 

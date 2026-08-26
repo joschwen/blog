@@ -1,5 +1,6 @@
 # build output
 dist/
+
 # generated types
 .astro/
 
@@ -12,10 +13,22 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# local caches and test output
+.cache/
+.eslintcache
+.nyc_output/
+coverage/
+
+# temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
 
 # environment variables
 .env
-.env.production
+.env.*
+!.env.example
 
 # macOS-specific files
 .DS_Store
@@ -26,12 +39,10 @@ pnpm-debug.log*
 .codex/
 .claude/
 
-# Pagfind earch index
+# Pagefind search index
 public/pagefind/*
 
-# Agents 
-.codex/
-.claude/
+# Agent configuration
 .agents/
 AGENTS.md
 TODO.md
