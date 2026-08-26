@@ -1,6 +1,6 @@
 ---
-title: The Major effect. Who will pop off at the 2026 Disc Golf World Championship?
-description: Using historic rating data to identify players that might surprise us.
+title: The Major effect. Who will surprise at the 2026 Disc Golf World Championship?
+description: Using historic rating data to identify players that can shoot hot.
 published: 2026-08-26
 category: Sport
 tags:

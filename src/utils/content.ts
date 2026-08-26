@@ -191,13 +191,16 @@ export function getPostSlugPath(
   filePath?: string
 ): string {
   const segments = getPostPathSegments(filePath);
+  const slug = slugify(getPostSlugSegment(id));
 
-  const slug =
-    slugify(getPostSlugSegment(id));
+  if (segments.length > 0) {
+    const lastSegment = segments.at(-1);
+    return lastSegment === slug
+      ? segments.join("/")
+      : [...segments, slug].join("/");
+  }
 
-  return segments.length > 0
-    ? [...segments, slug].join("/")
-    : slug;
+  return slug;
 }
 
 /**
@@ -236,9 +239,14 @@ export function getPageSlugPath(
   const segments = getPagePathSegments(filePath);
   const slug = slugify(getPostSlugSegment(id));
 
-  return segments.length > 0
-    ? [...segments, slug].join("/")
-    : slug;
+  if (segments.length > 0) {
+    const lastSegment = segments.at(-1);
+    return lastSegment === slug
+      ? segments.join("/")
+      : [...segments, slug].join("/");
+  }
+
+  return slug;
 }
 
 export function getPageSlug(
