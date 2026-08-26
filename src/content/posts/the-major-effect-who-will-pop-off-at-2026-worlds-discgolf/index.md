@@ -13,7 +13,7 @@ Instead of focusing on the most dominant and established players, I will try to 
 *Note: I will only work with MPO data to keep it concise for me, because I started this project a bit late 🫠 But let me know if I should repeat the analysis for FPO.*
 
 ## The data
-To do my analysis, I will fetched
+To do this analysis, I fetched
 - the top 100 players by rating
 - all players rating history
 - all players Elite Series and Major round ratings
@@ -62,3 +62,5 @@ That being said, if I had to make a pick of three players without a win on tour 
 - [Jesse Longenecker](https://www.pdga.com/player/149546) - overperforms at Majors and [did this sick 360 at the last tournament](https://youtu.be/r-RkSLDLy6Q?si=zYbqnbX3D0XSkFVJ&t=2862)
 
 Thanks for reading and let me know your thoughts!
+
+*PS: Because I started doing this last minute and wanted to finish the article in time my code is a mess but I can hand it in later if anyone's interested.*
